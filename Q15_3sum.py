@@ -3,7 +3,8 @@ class Solution:
         nums.sort()
         solution = []
         
-         
+        # method 1
+        # two passes for i and j (the first two numbers), and find the third number from the set which stores the visited j
         for i in range(0, len(nums)-1):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
@@ -24,7 +25,7 @@ class Solution:
     
         '''
         # method 2
-        
+        # one pass for the first number. The 2nd and 3rd numbers pass from the opposite side. (nums already sorted)
         for i in range(0, len(nums)-2):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
@@ -48,6 +49,7 @@ class Solution:
         
 '''
 # method 3
+    make use of the 2sum problem
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
