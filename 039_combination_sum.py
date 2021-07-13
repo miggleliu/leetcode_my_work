@@ -43,8 +43,7 @@ class Solution:
         
         # sort the candidates in decending order so that we can check the biggest element first
         # fill the bottle with stones firstly and sands lastly
-        candidates.sort()
-        candidates.reverse()
+        candidates.sort(reverse=True)
         ans = []
         
         def backtracking(idx, target, combination):
